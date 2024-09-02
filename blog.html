@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>プロジェクトブログ - 生体信号を用いた嗜好マッチングシステムの社会実装</title>
+    <style>
+        body {
+            font-family: 'Helvetica', 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            padding-bottom: 40px;
+        }
+        header {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+        nav {
+            background-color: #004080;
+            padding: 0.5rem;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 10px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        footer {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            height: 20px;
+            line-height: 20px;
+            border-top: 1px solid #002244;
+        }
+        footer p {
+            margin: 0;
+            font-size: 0.8em;
+        }
+        .blog-post {
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+        .blog-post:last-child {
+            border-bottom: none;
+        }
+        .post-meta {
+            font-style: italic;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>ブログ</h1>
+        <p>生体信号を用いた嗜好マッチングシステムの社会実装</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">ホーム</a></li>
+            <li><a href="index.html#about">プロジェクト概要</a></li>
+            <li><a href="index.html#team">チーム紹介</a></li>
+            <li><a href="index.html#progress">活動計画</a></li>
+            <li><a href="#">ブログ</a></li>
+            <li><a href="index.html#contact">お問い合わせ</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="blog">
+
+            <article class="blog-post">
+                <h2>脳波計測デバイスと刺激提示を同期させるためのトリガーボックスの作成</h2>
+                <p class="post-meta">投稿日: 2024年9月2日</p>
+                <p>トリガーボックスは，脳波実験において刺激呈示と脳波計測を正確に同期させるための重要な装置です．</p>
+
+                <h3>トリガーボックスの役割：</h3>
+                <ul>
+                    <li>刺激呈示システム（例：コンピューター画面）と脳波計測装置の間を橋渡しする．</li>
+                    <li>刺激が呈示された瞬間を正確に記録し，その情報を脳波データに統合する．</li>
+                    <li>ミリ秒単位の精度で同期を実現し，ERPの正確な時間分析を可能にする．</li>
+                </ul>
+                <h3>トリガーボックスの仕組み：</h3>
+                <ol>
+                    <li><strong>刺激呈示：</strong> 刺激呈示システムが特定の刺激を表示する際，図１のように画面左上に同期信号が表示される．</li>
+                    <img src="./images/show.png" alt="図１：刺激呈示画面の例" style="max-width: 100%; height: auto;">
+                    <li><strong>同期信号の読み取りと出力：</strong> 画面上の同期信号をフォトダイオードで読み取り，白，黒を識別する．白だった場合，5Vを出力，黒だった場合，0Vを出力する．</li>
+                </ol>
+                <h3>JLCPCB</h3>
+                <img src="./images/JLCPCB.png" alt="説明" style="max-width: 50%; height: auto;">
+                <p>JLCPCBは世界中で170以上もの国や地域との取引実績を持ち，年間の基板製造数は600万枚を超えます．ロボットに必要不可欠な回路基板の製造以外にも金属粉末焼結による部品製作や３Dプリントまで様々なサービスを短納期かつ低価格で提供しています．
+                学生プロジェクトBioSigMatchは2024年8月からプロジェクトに使用する実験機器の基板を無償で製造していただきました．</p>
+                <img src="./images/pcb.png" alt="説明" style="max-width: 100%; height: auto;">
+            </article>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 生体信号を用いた嗜好マッチングシステムの社会実装 - 東京農工大学</p>
+    </footer>
+</body>
+</html>
